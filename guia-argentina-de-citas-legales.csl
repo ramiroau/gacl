@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="note" default-locale="es-ES" version="1.0" demote-non-dropping-particle="sort-only">
   <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
@@ -12,7 +12,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>Transformation of Spanish Legal by Rafael Palomino to adapt to a possible Argentinean legal style </summary>
-    <updated>2020-05-10T14:09:16+00:00</updated>
+    <updated>2020-06-12T23:17:39+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -64,7 +64,7 @@
     </terms>
   </locale>
   <macro name="editor-translator">
-    <names variable="editor translator" delimiter=", ">
+    <names variable="author" delimiter=", ">
       <label form="verb"/>
       <name and="text" delimiter=", " prefix=" " delimiter-precedes-last="never"/>
     </names>
@@ -92,13 +92,17 @@
   </macro>
   <macro name="access">
     <group>
-      <text term="accessed" suffix=" "/>
-      <date variable="accessed" suffix=", ">
-        <date-part name="day" suffix=" "/>
-        <date-part name="month" suffix=" " text-case="lowercase"/>
-        <date-part name="year"/>
-      </date>
-      <group>
+      <choose>
+        <if match="any" variable="abstract">
+          <text term="accessed" suffix=" "/>
+          <date delimiter="de " variable="accessed" suffix=", ">
+            <date-part name="day" range-delimiter="" suffix=" "/>
+            <date-part name="month" suffix=" " text-case="lowercase"/>
+            <date-part name="year"/>
+          </date>
+        </if>
+      </choose>
+      <group prefix="disponible ">
         <text term="at" suffix=" "/>
         <text variable="URL"/>
       </group>
@@ -116,7 +120,7 @@
   </macro>
   <macro name="title-short">
     <choose>
-      <if type="bill book graphic legal_case legislation motion_picture report song webpage entry-encyclopedia" match="any">
+      <if type="book graphic legal_case legislation motion_picture song webpage entry-encyclopedia article" match="any">
         <text variable="title" text-case="capitalize-first" font-style="italic" suffix=", cit." form="short"/>
       </if>
       <else>
@@ -139,7 +143,7 @@
       <choose>
         <if position="first">
           <choose>
-            <if type="bill book graphic motion_picture song" match="any">
+            <if type="book graphic motion_picture song" match="any">
               <group>
                 <text macro="author" font-variant="small-caps" suffix=", "/>
                 <group>
@@ -180,7 +184,7 @@
                 </group>
                 <text variable="edition" suffix=", "/>
                 <text macro="publisher"/>
-                <group>
+                <group delimiter=", ">
                   <date variable="issued" prefix=", ">
                     <date-part name="year"/>
                   </date>
@@ -206,12 +210,7 @@
                 <date variable="issued">
                   <date-part name="year"/>
                 </date>
-                <text macro="editor-translator"/>
                 <text variable="edition"/>
-                <group delimiter=" ">
-                  <text macro="publisher"/>
-                  <text variable="collection-title" prefix=" (" suffix=")"/>
-                </group>
                 <group>
                   <label variable="locator" form="short"/>
                   <text variable="locator" prefix=" "/>
@@ -241,25 +240,21 @@
                       </group>
                       <choose>
                         <if match="any" variable="references">
-                          <text variable="references" prefix="(" suffix="). "/>
+                          <text variable="references" prefix="del "/>
                         </if>
                       </choose>
                     </if>
                   </choose>
                   <choose>
                     <if match="all" variable="number">
-                      <date form="text" variable="issued" text-case="sentence" prefix=". Sentencia del ">
-                        <date-part name="day" range-delimiter="" text-case="lowercase"/>
-                        <date-part name="month" range-delimiter=""/>
-                        <date-part name="year" range-delimiter=""/>
-                      </date>
+                      <text variable="number" prefix=". Expediente No. "/>
                     </if>
-                    <else>
-                      <date date-parts="year" form="numeric" variable="issued" prefix=" (" suffix=")">
-                        <date-part name="year"/>
-                      </date>
-                    </else>
                   </choose>
+                  <date delimiter=" " variable="issued" prefix=" (" suffix=")">
+                    <date-part name="month" form="short" text-case="capitalize-first"/>
+                    <date-part name="day" range-delimiter="" text-case="lowercase" suffix=","/>
+                    <date-part name="year"/>
+                  </date>
                   <choose>
                     <if match="any" variable="locator">
                       <label text-case="capitalize-first" prefix=". " suffix=" " variable="locator"/>
@@ -289,21 +284,21 @@
                 </group>
               </group>
             </else-if>
-            <else-if type="webpage" match="any">
+            <else-if type="webpage post-weblog" match="any">
               <group>
                 <text macro="author" suffix=", "/>
                 <text variable="title" font-style="italic" suffix=", "/>
-                <text variable="publisher" font-variant="small-caps" suffix=", "/>
-                <date form="numeric" variable="issued" prefix=" " suffix=", ">
+                <text variable="container-title" font-variant="small-caps" suffix=", "/>
+                <date form="numeric" variable="issued" prefix=" ">
                   <date-part name="year"/>
                 </date>
                 <group>
-                  <text term="available at" suffix=" "/>
+                  <text term="available at" text-case="capitalize-first" prefix=", " suffix=" "/>
                   <text variable="URL" suffix=" "/>
                 </group>
                 <group>
                   <text term="accessed" text-case="capitalize-first" suffix=": "/>
-                  <date form="text" variable="accessed"/>
+                  <date form="numeric" variable="accessed"/>
                 </group>
               </group>
             </else-if>
@@ -311,11 +306,12 @@
               <group delimiter=", ">
                 <text macro="author"/>
                 <text variable="title" font-style="italic"/>
-                <text variable="publisher" font-variant="small-caps"/>
-                <text variable="number"/>
+                <text variable="genre"/>
                 <group>
-                  <date form="text" date-parts="year-month-day" variable="issued">
-                    <date-part name="year"/>
+                  <date delimiter="" variable="issued">
+                    <date-part name="month" form="short" text-case="capitalize-first" suffix="."/>
+                    <date-part name="day" prefix=" "/>
+                    <date-part name="year" prefix=", "/>
                   </date>
                   <text variable="abstract" prefix=" (" suffix=")"/>
                 </group>
@@ -324,18 +320,31 @@
                   <text variable="locator"/>
                 </group>
               </group>
+              <group prefix=". ">
+                <text term="available at" text-case="capitalize-first"/>
+                <text variable="URL" prefix=" "/>
+              </group>
             </else-if>
             <else-if type="legislation" match="any">
               <group>
                 <text variable="title" suffix=", "/>
-                <date form="text" variable="issued">
-                  <date-part name="month" form="short"/>
+                <date delimiter=" " variable="issued">
+                  <date-part name="month" form="short" text-case="capitalize-first"/>
+                  <date-part name="day" text-case="lowercase"/>
                 </date>
+                <date date-parts="year" form="text" variable="issued" prefix=", "/>
                 <group>
                   <choose>
                     <if match="any" variable="container-title">
                       <text variable="container-title" prefix=", "/>
-                      <text variable="volume" prefix=" No. "/>
+                      <choose>
+                        <if match="any" variable="volume">
+                          <text variable="volume" prefix=" No. "/>
+                        </if>
+                        <else-if match="any" variable="DOI">
+                          <text variable="DOI" prefix=" (Id: " suffix=")"/>
+                        </else-if>
+                      </choose>
                     </if>
                   </choose>
                   <choose>
@@ -343,17 +352,42 @@
                       <text variable="abstract" prefix=" (" suffix=")"/>
                     </if>
                   </choose>
+                  <choose>
+                    <if match="any" variable="URL">
+                      <text variable="URL" prefix=". Disponible en: "/>
+                    </if>
+                  </choose>
                   <group>
-                    <label variable="locator"/>
-                    <text variable="locator" prefix=" "/>
+                    <choose>
+                      <if match="any" variable="abstract">
+                        <label text-case="capitalize-first" prefix=" " variable="locator"/>
+                        <text variable="locator" prefix=" "/>
+                      </if>
+                      <else>
+                        <label prefix=", " variable="locator"/>
+                        <text variable="locator" prefix=" "/>
+                      </else>
+                    </choose>
                   </group>
                 </group>
               </group>
-              <choose>
-                <if match="any" variable="URL">
-                  <text variable="URL" prefix=". Disponible en: "/>
-                </if>
-              </choose>
+            </else-if>
+            <else-if type="bill" match="any">
+              <group delimiter=", ">
+                <text variable="authority"/>
+                <text variable="number" prefix="Proyecto "/>
+                <text variable="title"/>
+              </group>
+              <text macro="author" prefix=" (" suffix=")"/>
+              <date delimiter="" variable="issued" prefix=",">
+                <date-part name="month" form="short" text-case="capitalize-first" prefix=" "/>
+                <date-part name="day" prefix=" "/>
+                <date-part name="year" prefix=", "/>
+              </date>
+              <group>
+                <text term="available at" text-case="capitalize-first" prefix=". " suffix=" "/>
+                <text variable="URL"/>
+              </group>
             </else-if>
             <else-if type="paper-conference" match="any">
               <text macro="author"/>
@@ -413,7 +447,7 @@
         </else-if>
         <else-if position="subsequent">
           <choose>
-            <if type="bill book graphic legislation motion_picture report song" match="any">
+            <if type="book chapter" match="any">
               <group delimiter=", ">
                 <text macro="author" font-variant="small-caps"/>
                 <text macro="title-short"/>
