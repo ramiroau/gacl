@@ -1,3 +1,11 @@
+# Guía Argentina de Citas Legales (GACL)
+
+Este repositorio contiene: 
+
+1. `test`, carpeta con un archivo JSON, un archivo `.md`y un archivo `.pdf`para ver cómo funciona la GACL en la práctica. 
+2. `gacl.pdf`(este README en PDF)
+3. El documento CSL propiamente dicho, para instalar en Zotero et. al.: `guia-argentina-de-citas-legales.csl`. 
+
 Este es un documento con especificaciones sobre la *Guía Argentina de Citas Legales* desarrollado con base en `spanish-legal.csl` de Rafael Palomino. La GACL funciona como guía de estilo (que autores y editores pueden adoptar / modificar como deseen) pero funciona *especialmente* como un mecanismo automatizado de citas que produce resultados que respetan, en general, la práctica jurídica local. A continuación la lista de materiales que el estilo desea procesar y su estado de implementación actual [^fn2]. 
 
 | Tipo madre                  | Precisión                                  | Estado       |
