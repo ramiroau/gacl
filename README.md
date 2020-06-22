@@ -1,36 +1,34 @@
-# Guía Argentina de Citas Legales 
-
 Este es un documento con especificaciones sobre la *Guía Argentina de Citas Legales* desarrollado con base en `spanish-legal.csl` de Rafael Palomino. La GACL funciona como guía de estilo (que autores y editores pueden adoptar / modificar como deseen) pero funciona *especialmente* como un mecanismo automatizado de citas que produce resultados que respetan, en general, la práctica jurídica local. A continuación la lista de materiales que el estilo desea procesar y su estado de implementación actual [^fn2]. 
 
 | Tipo madre                  | Precisión                                  | Estado       |
 |:----------------------------|:-------------------------------------------|:-------------|
-| Decisiones judiciales       | Fallos CSJN                                | Implementado | 
-|                             | Corte IDH                                  | Implementado |
-|                             | Tribunales inferiores                      | Implementado |
-|                             | TEDH                                       | Implementado |
-|                             | Informes individuales (CIDH, HRC)          | Implementado |
-|                             | SCOTUS							                       | Implementado |
+| Decisiones judiciales       | Fallos CSJN                                | Implementado |* 
+|                             | Corte IDH                                  | Implementado |*
+|                             | Tribunales inferiores                      | Implementado |*
+|                             | TEDH                                       | Implementado |*
+|                             | Informes individuales (CIDH, HRC)          | Implementado |*
+|                             | SCOTUS							           | Implementado |*
 | Decisiones cuasi-judiciales | Jurados de enjuiciamiento                  |              |
-|                             | Observaciones Generales de Org. de DDHH    | Implementado |
+|                             | Observaciones Generales de Org. de DDHH    | Implementado |*
 |                             | Tribunales administrativos                 |              |
 |                             | Acordadas                                  |              |
 |                             | Dictamenes de MP / PG                      |              |
-| Regulaciones                | Leyes (link + BO)                          | Implementado |
-|                             | Decretos                                   | Implementado |
+| Regulaciones                | Leyes (link + BO)                          | Implementado |*
+|                             | Decretos                                   | Implementado |*
 |                             | Resoluciones                               | Implementado |
-|                             | Ordenanzas                                 | Implementado |
-| Proceso legislativo         | Proyectos de ley                           | Implementado |
+|                             | Ordenanzas                                 | Implementado |*
+| Proceso legislativo         | Proyectos de ley                           | Implementado |*
 |                             | Dictamenes de comisión (mayoría y minoría) | Implementado |
-|                             | Versiones taquigráficas                    | Implementado |
+|                             | Versiones taquigráficas                    | Implementado |*
 | Actos administrativos       |                                            |              |
-| Reportes                    | Reportes técnicos, documentos de org.      | Implementado |
-| Académicos                  | Libros                                     | Implementado |
-|                             | Artículos                                  | Implementado |
-|                             | Papers en conferencias                     | Implementado |
-|                             | Libros                                     | Implementado |
-|                             | Capítulos de libros                        | Implementado |
+| Reportes                    | Reportes técnicos, documentos de org.      | Implementado |*
+| Académicos                  | Libros                                     | Implementado |*
+|                             | Artículos                                  | Implementado |*
+|                             | Papers en conferencias                     | Implementado |*
+|                             | Libros                                     | Implementado |*
+|                             | Capítulos de libros                        | Implementado |*
 |                             | Borradores                                 | Implementado |
-| Sitios web                  | sitios en general + blogs                  | Implementado |
+| Sitios web                  | sitios en general + blogs                  | Implementado |*
 | Documentos en general       |                                            | Implementado |
 
 Table: Lista de materiales de la GACL y estado de implementación.
@@ -41,7 +39,8 @@ La GACL funciona bien en [Zotero](https://www.zotero.org/) y debería funcionar 
 
 La GACL es compatible con el estándar CSL 1.0.1 pero **no es compatible** con el estándar de Juris-M. 
 
-La GACL, además de un estilo de citas que editores pueden adoptar / revisar, funciona **especialmente** como lenguaje CSL que automatiza el proceso. Para que el "GACL como CSL" funcione bien, en ocasiones cierto tipo de datos deben "archivarse" en el campo correcto de nuestro administrador de bibliografía. P.ej., para que el tipo de sentencias en casos de la Corte Interamericana sea reflejado correctamente y siguiendo las prácticas usuales, es necesario que el tipo de sentencia se cargue en el campo ``abstract`` (p.ej., "Fondo, Reparaciones y Costas" u "Opinión Consultiva") [^fn4]. 
+La GACL, además de un estilo de citas que editores pueden adoptar / revisar, funciona **especialmente** como lenguaje CSL que automatiza el proceso. Para que el "GACL como CSL" funcione bien, en ocasiones cierto tipo de datos deben "archivarse" en el campo correcto de nuestro administrador de bibliografía. P.ej., para que el tipo de sentencias en casos de la Corte Interamericana sea reflejado correctamente y siguiendo las prácticas usuales, es necesario que el tipo de sentencia se cargue en el campo `abstract`
+ (p.ej., "Fondo, Reparaciones y Costas" u "Opinión Consultiva") [^fn4]. 
 
 La Tabla 2 identifica esas particularidades. 
 
@@ -113,7 +112,7 @@ La GACL estuvo pensada para usar abreviaciones a la hora de referirse a tribunal
 
 Table: Listado de abreviaturas 
 
-# Ejemplos  
+# Ejemplos  
 
 ## Libros  
 
@@ -121,13 +120,13 @@ Table: Listado de abreviaturas
 
 ## Capítulos de libros 
 
-<span style="font-variant: small-caps;">P. Bergallo</span>, «Cambio Constitucional, Reproduccion y Derechos», en Roberto Gargarella (ed.) *La Constitución en 2020: 48 propuestas para una sociedad igualitaria*, Siglo XXI, Buenos Aires, 2011, pág. 64
+<span style="font-variant: small-caps;">P. Bergallo</span>, «Cambio Constitucional, Reproduccion y Derechos», en Roberto Gargarella (ed.) *La Constitución en 2020: 48 propuestas para una sociedad igualitaria*, Siglo XXI, Buenos Aires, 2011. 
 
-<span style="font-variant: small-caps;">J. Waldron</span>, «Constitutionalism: A Skeptical View», en Thomas Christiano, John Philip Christman (eds.) *Contemporary Debates in Political Philosophy*, Wiley- Blackwell, Malden, MA, 2009, pág. 55.
+<span style="font-variant: small-caps;">J. Waldron</span>, «Constitutionalism: A Skeptical View», en Thomas Christiano, John Philip Christman (eds.) *Contemporary Debates in Political Philosophy*, Wiley-Blackwell, Malden, MA, 2009. 
 
-## Artículos  
+## Artículos 
 
-L. H. H. Lüchmann, «Representation Within Participative Experiences», Lua Nova: Revista de Cultura e Política, 70, 2007, Disponible en http://www.scielo.br/scielo.php?script=sci_abstract&pid=S0102-64452007000100007&lng=en&nrm=iso&tlng=pt.
+L. H. H. Lüchmann, «Representation Within Participative Experiences», Lua Nova: Revista de Cultura e Política, 70, 2007, Disponible en http://www.scielo.br/scielo.php?script=sci_abstract&pid=S0102-6445200700010-0007&lng=en&nrm=iso&tlng=pt.
 
 R. Post, «Theorizing Disagreement: Reconceiving The Relationship Between Law And Politics», California Law Review, vol. 98, 4, 2010, pág. 1343, Disponible en http://www.jstor.org/stable/27896713.
 
@@ -135,11 +134,11 @@ R. Post, «Theorizing Disagreement: Reconceiving The Relationship Between Law An
 
 R. Siegel, «The Jurisgenerative Role of Social Movements in US Constitutional Law», Seminario en Latinoamérica de Teoria Constitucional y Politica, Oaxaca, Mexico, 7 de Julio de 2004.
 
-## Blogs 
+## Blogs 
 
-G. Arballo, *Reformas en la Justicia: el Palacio y la Calle*, <span style="font-variant: small-caps;">Saber Leyes no es Saber Derecho</span>, 04/06/2020, disponible en http://www.saberderecho.com/2020/06/reformas-en-la-justicia-el-palacio-y-la.html Fecha de consulta: 12/06/2020; 
+G. Arballo, *Reformas en la Justicia: el Palacio y la Calle*, <span style="font-variant: small-caps;">Saber Leyes no es Saber Derecho</span>, 04/06/2020, disponible en http://www.saberderecho.com/2020/06/reformas-en-la-justicia-el-palacio-y-la.html Fecha de consulta: 12/06/2020. 
 
-## Leyes 
+## Leyes 
 
 Ley 25.673. Creación del Programa Nacional de Salud Sexual y Procreación Responsable, Nov. 22, 2002, B.O. No. 30.032.
 
@@ -149,9 +148,9 @@ Decreto 260. Emergencia Sanitaria, Mar. 12, 2020, B.O. No. 34.327. Disponible en
 
 ## Resoluciones 
 
-Resolución 1054/2020, Jun. 19, 2020 (Ministerio de Salud). Disponible en: http://servicios.infoleg.gob.ar/infolegInternet/verNorma.do;jsessionid=49E37248395838D0BB7E2DF255C5EC11?id=338960.
+Resolución 1054/2020, Jun. 19, 2020 (Ministerio de Salud). Disponible en: http://servicios.infoleg.gob.ar/infolegInternet/verNorma.do;jsessionid-=49E37248395838D0BB7E2DF255C5EC11?id=338960.
 
-## Ordenanzas 
+## Ordenanzas 
 
 Ordenanza No. 7227. Autoriza al D.E. renovar Comodato de Uso inmueble situado en calle Vélez Sarsfield No 480, Mar. 14, 2019, B.O. Disponible en: https://www.tresarroyos.gov.ar/recursos/boletin_oficial/ordenanzas/2019/2019-O-7227.pdf.
 
@@ -163,7 +162,7 @@ CSe, Proyecto 3878-S-2015, Modificaciones respecto del reglamento interno de fun
 
 ## Versiones taquigráficas 
 
-CDi, *Versión taquigráfica de audiencia pública sobre Interrupción Voluntaria del Embarazo*, May. 3, 2018. Disponible en https://www.diputados.gov.ar/comisiones/permanentes/clgeneral/reuniones/vt/.
+CDi, *Versión taquigráfica de audiencia pública sobre Interrupción Voluntaria del Embarazo*, May. 3, 2018. Disponible en https://www.diputados.gov.ar/comisiones/-permanentes/clgeneral/reuniones/vt/.
 
 ## Casos de la CSJN (publicados en Fallos)
 
@@ -181,17 +180,17 @@ CSJN, *Fernández de Kirchner, Cristina en carácter de Presidenta del Honorab
 
 ## Casos tribunales inferiores 
 
-### Publicados en revistas encuadernadas 
+### Publicados en revistas encuadernadas 
 
 CNCrim. y Correc. (Sala VII), *G., N. s/sobreseimiento, aborto, instr. 33/170*, E.D. 222:435 (Abr. 17, 2007).
 
 SC (Tucumán), *Schull de Giani, Betti*, LL 28:402 (Ago. 25, 1942).
 
-### Publicados en suplementos 
+### Publicados en suplementos 
 
 J.CyC No. 2 (San Martín), *Castro de Guerrero, Anibal s/ homicidio*, Suplemento de Derecho Penal de La Ley del 10 oct. 2017. Expediente No. 28123/2016 (Dic. 3, 2016).
 
-### Publicados en sitios web
+### Publicados en sitios web 
 
 CNCP, *Moccia, Gabriela s/ recurso de casacion*, SAIJ SU33000928. Expediente No. 582 (Mar. 11, 1996). Disponible en: http://shorturl.at/eouzJ.
 
@@ -211,7 +210,7 @@ Corte IDH, *Caso Loayza Tamayo Vs. Perú*, Serie C 33. Fondo, Reparaciones y Co
 
 CIDH, *Nestor José y Luis Uzcátegui*, Informe No. 88/10. Admisibilidad (Jul. 14, 2010). 
 
-TEDH, *Tolstoy Miloslavsky v. The United Kingdom*, Series A 316. Merits. Expediente No. 18139/91 (Jul. 13, 1995). Disponible en: https://hudoc.echr.coe.int/eng#%7B%22fulltext%22:%5B%22tolstoy%22%5D,%22documentcollectionid2%22:%5B%22GRANDCHAMBER%22,%22CHAMBER%22%5D,%22itemid%22:%5B%22001-57947%22%5D%7D.
+TEDH, *Tolstoy Miloslavsky v. The United Kingdom*, Series A 316. Merits. Expediente No. 18139/91 (Jul. 13, 1995). Disponible en: https://hudoc.echr.coe.int/eng#-%7B%22fulltext%22:%5B%22tolstoy%22%5D,%22documentcollectionid2%22:%5B%-22GRANDCHAMBER%22,%22CHAMBER%22%5D,%22itemid%22:%5B%22001-57947%22%5D%7D.
 
 ## Casos extranjeros 
 
@@ -223,11 +222,11 @@ USSC (EEUU), *New York Times v. Sullivan*, U.S. 376:254 (1964).
 
 CDH, «Observación general No 34. Artículo 19 Libertad de opinión y libertad de expresión». Comité de Derechos Humanos de las Naciones Unidas, Ginebra. CCPR/C/GC/34. 12 de Septiembre de 2011.
 
-## Reportes técnicos 
+## Reportes técnicos
 
-CIDH, «Marco jurídico interamericano del Derecho a la Libertad de Expresión». Relatoría Especial para la Libertad de Expresión de la Comisión Interamericana de Derechos Hu- manos. OEA/Ser.L/V/II CIDH/RELE/INF. 2/09. 30 de Diciembre de 2009.  
+CIDH, «Marco jurídico interamericano del Derecho a la Libertad de Expresión». Relatoría Especial para la Libertad de Expresión de la Comisión Interamericana de Derechos Humanos. OEA/Ser.L/V/II CIDH/RELE/INF. 2/09. 30 de Diciembre de 2009.  
 
-ADC, «El (des)control democrático de los organismos de inteligencia en la Argentina». Aso- ciación por los Derechos Civiles, Buenos Aires. Enero de 2015.  
+ADC, «El (des)control democrático de los organismos de inteligencia en la Argentina». Asociación por los Derechos Civiles, Buenos Aires. Enero de 2015.  
 
 OCDE, «Recommendation on Public Procurement». Directorate for Public Governance and Territorial Development. OCDE. 2015.  
 
