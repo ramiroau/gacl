@@ -2,8 +2,6 @@
 
 Este es un documento con especificaciones sobre la *Guía Argentina de Citas Legales* desarrollado con base en `spanish-legal.csl` de Rafael Palomino. La GACL funciona como guía de estilo (que autores y editores pueden adoptar / modificar como deseen) pero funciona *especialmente* como un mecanismo automatizado de citas que produce resultados que respetan, en general, la práctica jurídica local. A continuación la lista de materiales que el estilo desea procesar y su estado de implementación actual [^fn2]. 
 
-\footnotesize
-
 | Tipo madre                  | Precisión                                  | Estado       |
 |:----------------------------|:-------------------------------------------|:-------------|
 | Decisiones judiciales       | Fallos CSJN                                | Implementado | 
@@ -37,8 +35,6 @@ Este es un documento con especificaciones sobre la *Guía Argentina de Citas Leg
 
 Table: Lista de materiales de la GACL y estado de implementación.
 
-\normalsize
-
 # Implementación
 
 La GACL funciona bien en [Zotero](https://www.zotero.org/) y debería funcionar bien en otros administradores de bibliografía, como [Mendeley](https://www.mendeley.com/?interaction_required=true), [Papers](https://www.papersapp.com/), [Docear4Word](http://www.docear.org/software/add-ons/docear4word/overview/) o [Paperpile](https://paperpile.com/). También funciona bien como CSL autónomo a ser procesado por `pandoc-citeproc`. 
@@ -48,8 +44,6 @@ La GACL es compatible con el estándar CSL 1.0.1 pero **no es compatible** con e
 La GACL, además de un estilo de citas que editores pueden adoptar / revisar, funciona **especialmente** como lenguaje CSL que automatiza el proceso. Para que el "GACL como CSL" funcione bien, en ocasiones cierto tipo de datos deben "archivarse" en el campo correcto de nuestro administrador de bibliografía. P.ej., para que el tipo de sentencias en casos de la Corte Interamericana sea reflejado correctamente y siguiendo las prácticas usuales, es necesario que el tipo de sentencia se cargue en el campo ``abstract`` (p.ej., "Fondo, Reparaciones y Costas" u "Opinión Consultiva") [^fn4]. 
 
 La Tabla 2 identifica esas particularidades. 
-
-\footnotesize
 
 | Uso             | Zot Item Type    | Biblatex            | CSL-JSON          | Notas                                                 |
 |:----------------|:-----------------|:--------------------|:------------------|:------------------------------------------------------|
@@ -81,13 +75,9 @@ La Tabla 2 identifica esas particularidades.
 
 Table: Listado de equivalencias y requerimientos para que el CSL funcione óptimamente. 
 
-\normalsize
-
 # Abreviaturas 
 
 La GACL estuvo pensada para usar abreviaciones a la hora de referirse a tribunales. Se siguen las de "Cuadernos del Derecho", entre las más usuales: 
-
-\footnotesize
 
 | Nombre completo                                                                 | Abreviación          |
 |---------------------------------------------------------------------------------|----------------------| 
@@ -122,8 +112,6 @@ La GACL estuvo pensada para usar abreviaciones a la hora de referirse a tribunal
 | Juzgado de Primera Instancia en lo Civil y Comercial                            | JPICiv. y Com.       |
 
 Table: Listado de abreviaturas 
-
-\normalsize
 
 # Ejemplos  
 
