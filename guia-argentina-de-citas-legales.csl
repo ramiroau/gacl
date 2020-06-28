@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="note" default-locale="es-ES" version="1.0" demote-non-dropping-particle="sort-only">
   <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
@@ -12,7 +12,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>Transformation of Spanish Legal by Rafael Palomino to adapt to a possible Argentinean legal style </summary>
-    <updated>2020-06-21T01:45:14+00:00</updated>
+    <updated>2020-06-28T21:50:39+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -185,11 +185,11 @@
                 <text macro="access"/>
               </group>
             </else-if>
-            <else-if type="article-journal article-magazine broadcast interview map patent personal_communication song speech thesis article-newspaper" match="any">
+            <else-if type="article-journal broadcast interview map patent personal_communication song speech thesis" match="any">
               <group delimiter=", ">
                 <text macro="author" font-variant="normal"/>
                 <text macro="title" text-case="capitalize-all"/>
-                <text variable="container-title" font-style="normal"/>
+                <text variable="container-title" font-style="normal" font-variant="small-caps"/>
                 <group>
                   <text term="volume" form="short" text-case="lowercase" suffix=" "/>
                   <text variable="volume"/>
@@ -264,11 +264,35 @@
                 <text macro="publisher" suffix=". "/>
                 <text variable="number" suffix=". "/>
                 <date form="text" variable="issued">
+                  <date-part name="day"/>
+                  <date-part name="month" text-case="lowercase"/>
                   <date-part name="year"/>
                 </date>
                 <group>
                   <label text-case="capitalize-first" prefix=". " suffix=" " variable="locator" form="short"/>
                   <text variable="locator"/>
+                </group>
+              </group>
+            </else-if>
+            <else-if type="article-magazine article-newspaper" match="any">
+              <group delimiter=", ">
+                <text macro="author"/>
+                <text variable="title" quotes="true"/>
+                <text variable="container-title" font-variant="small-caps"/>
+                <date form="numeric" variable="issued">
+                  <date-part name="day" range-delimiter="/"/>
+                  <date-part name="month" form="numeric" text-case="lowercase"/>
+                  <date-part name="year"/>
+                </date>
+                <group delimiter=" ">
+                  <text term="available at"/>
+                  <text variable="URL"/>
+                  <text term="accessed" text-case="capitalize-first" suffix=":"/>
+                  <date form="numeric" variable="accessed" text-case="lowercase">
+                    <date-part name="day"/>
+                    <date-part name="month" text-case="lowercase"/>
+                    <date-part name="year"/>
+                  </date>
                 </group>
               </group>
             </else-if>
@@ -286,7 +310,11 @@
                 </group>
                 <group>
                   <text term="accessed" text-case="capitalize-first" suffix=": "/>
-                  <date form="numeric" variable="accessed"/>
+                  <date form="numeric" variable="accessed">
+                    <date-part name="day"/>
+                    <date-part name="month" text-case="lowercase"/>
+                    <date-part name="year"/>
+                  </date>
                 </group>
               </group>
             </else-if>
