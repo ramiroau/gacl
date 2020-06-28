@@ -32,6 +32,7 @@ Este es un documento con especificaciones sobre la *Guía Argentina de Citas Leg
 | Reportes                    | Reportes técnicos, documentos de org.      | Implementado |*
 | Académicos                  | Libros                                     | Implementado |*
 |                             | Artículos                                  | Implementado |*
+|                             | Artículos revistas / diarios               | Implementado | 
 |                             | Papers en conferencias                     | Implementado |*
 |                             | Libros                                     | Implementado |*
 |                             | Capítulos de libros                        | Implementado |*
@@ -241,6 +242,10 @@ OCDE, «Recommendation on Public Procurement». Directorate for Public Governanc
 # Contacto
 
 Por cualquier sugerencia o comentario, vías de contacto en https://ramiroau.github.io/
+
+# Actualizaciones
+
+* **V.1.1**. Implementación de artículos de diarios y revistas (con fecha igual a blogs y páginas de Internet) y cambio de mes texto en fecha completa (de mayúscula, como es en inglés, a minúscula, como se estila en español).   
 
 [^fn2]: La idea es que se vaya expandiendo, pero estos son los materiales que parecen necesarios luego de una mini encuesta en Twitter. 
 
