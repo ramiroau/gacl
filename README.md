@@ -241,11 +241,11 @@ USSC (EEUU), *New York Times v. Sullivan*, U.S. 376:254 (1964).
 
 ## Documentos ONU
 
-CDH, «Observación general No 34. Artículo 19 Libertad de opinión y libertad de expresión». Comité de Derechos Humanos de las Naciones Unidas, Ginebra. CCPR/C/GC/34. 12 de Septiembre de 2011.
+CDH, «Observación general No 34. Artículo 19 Libertad de opinión y libertad de expresión». Comité de Derechos Humanos de las Naciones Unidas, Ginebra. CCPR/C/GC/34. 12 de septiembre de 2011.
 
 ## Reportes técnicos
 
-CIDH, «Marco jurídico interamericano del Derecho a la Libertad de Expresión». Relatoría Especial para la Libertad de Expresión de la Comisión Interamericana de Derechos Humanos. OEA/Ser.L/V/II CIDH/RELE/INF. 2/09. 30 de Diciembre de 2009.  
+CIDH, «Marco jurídico interamericano del Derecho a la Libertad de Expresión». Relatoría Especial para la Libertad de Expresión de la Comisión Interamericana de Derechos Humanos. OEA/Ser.L/V/II CIDH/RELE/INF. 2/09. 30 de diciembre de 2009.  
 
 ADC, «El (des)control democrático de los organismos de inteligencia en la Argentina». Asociación por los Derechos Civiles, Buenos Aires. Enero de 2015.  
 
