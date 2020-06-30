@@ -1,4 +1,4 @@
-# Guía Argentina de Citas Legales (GACL)
+# Guía Argentina de Citas Legales
 
 ## Actualizaciones
 
@@ -41,7 +41,7 @@ Este es un documento con especificaciones sobre la *Guía Argentina de Citas Leg
 |                             | Libros                                     | Implementado |*
 |                             | Capítulos de libros                        | Implementado |*
 |                             | Borradores                                 | Implementado |
-| Sitios web                  | sitios en general + blogs                  | Implementado |*
+| Sitios web                  | sitios en general + blogs + foros                | Implementado |*
 | Documentos en general       |                                            | Implementado |
 
 Table: Lista de materiales de la GACL y estado de implementación.
@@ -148,10 +148,6 @@ R. Post, «Theorizing Disagreement: Reconceiving The Relationship Between Law An
 
 R. Siegel, «The Jurisgenerative Role of Social Movements in US Constitutional Law», Seminario en Latinoamérica de Teoria Constitucional y Politica, Oaxaca, Mexico, 7 de Julio de 2004.
 
-## Blogs 
-
-G. Arballo, *Reformas en la Justicia: el Palacio y la Calle*, <span style="font-variant: small-caps;">Saber Leyes no es Saber Derecho</span>, 04/06/2020, disponible en http://www.saberderecho.com/2020/06/reformas-en-la-justicia-el-palacio-y-la.html Fecha de consulta: 12/06/2020. 
-
 ## Leyes 
 
 Ley 25.673. Creación del Programa Nacional de Salud Sexual y Procreación Responsable, Nov. 22, 2002, B.O. No. 30.032.
@@ -248,9 +244,9 @@ OCDE, «Recommendation on Public Procurement». Directorate for Public Governanc
 
 S. Linares; J. L. Martí, *Aborto: la propuesta de un referéndum*, <span style="font-variant: small-caps;">Clarín</span>, 11/08/2018, disponible en https://www.clarin.com/opinion/aborto-propuesta-referendum_0_SJ4acDnS7.html Fecha de consulta: 12/08/2018.
 
-R. Álvarez Ugarte, *Pandemia, clases y zoom*, <span style="font-variant: small-caps;">Blog personal</span>, 09/04/2020, disponible en https://ramiroau.github.io/blog/pandemia/ Fecha de consulta: 10/05/2020.
+G. Arballo, *Reformas en la Justicia: el Palacio y la Calle*, <span style="font-variant: small-caps;">Saber Leyes no es Saber Derecho</span>, 04/06/2020, disponible en http://www.saberderecho.com/2020/06/reformas-en-la-justicia-el-palacio-y-la.html Fecha de consulta: 12/06/2020. 
 
-M. Zuckerberg, *Zuckerberg’s remarks on the death of George Floyd*, <span style="font-variant: small-caps;">Facebook</span> (entrada de Facebook), 29/05/2020, disponible en https://www.facebook.com/zuck/posts/10111961824369871 Fecha de consulta: 30/06/2020.
+M. Zuckerberg, *Zuckerberg’s remarks on the death of George Floyd*, <span style="font-variant: small-caps;">Facebook</span> (entrada de Facebook), 29/05/2020, disponible en https://www.facebook.com/-zuck/posts/10111961824369871 Fecha de consulta: 30/06/2020.
 
 # Contacto
 
@@ -259,3 +255,5 @@ Por cualquier sugerencia o comentario, vías de contacto en https://ramiroau.git
 [^fn2]: La idea es que se vaya expandiendo, pero estos son los materiales que parecen necesarios luego de una mini encuesta en Twitter. 
 
 [^fn4]: Son decisiones arbitrarias pero que se basan en algunas ausencias de opciones en los campos que muestra Zotero por default. Aparentemente, muchas de estas ausencias se van a resolver en la versión 1.0 de Zotero. 
+
+
