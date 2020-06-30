@@ -2,7 +2,7 @@
 
 ## Actualizaciones
 
-* **V.1.1**. Implementación de artículos de diarios y revistas (con fecha igual a blogs y páginas de Internet) y cambio de mes texto en fecha completa (de mayúscula, como es en inglés, a minúscula, como se estila en español).   
+* **V.1.1**. Implementación de artículos de diarios y revistas (con fecha igual a blogs y páginas de Internet) y cambio de mes texto en fecha completa (de mayúscula, como es en inglés, a minúscula, como se estila en español). Implementación de "Mensaje de Foro", con `genre` (p.ej: "entrada de Facebook"). 
 
 ## Instalación 
 
@@ -91,6 +91,7 @@ La Tabla 2 identifica esas particularidades.
 | Observ. General | Report 			 | report o techreport | report 		   |   													   |
 | Sitio web       | Web Page         | online              | webpage           |                                                       |
 | Blog post       | Blog post        | online              | post-weblog       |                                                       |
+| Mensaje de foro | Forum post        | online              | post       | Tipo de entrada: `genre`= entrada Faceboo, Reddit, etc.   |
 | Documento misc  | Manuscript       | unpublished         | manuscript        | Requiere: `abstract` = {localización del doc.}          |
 
 Table: Listado de equivalencias y requerimientos para que el CSL funcione óptimamente. 
@@ -250,6 +251,14 @@ CIDH, «Marco jurídico interamericano del Derecho a la Libertad de Expresión
 ADC, «El (des)control democrático de los organismos de inteligencia en la Argentina». Asociación por los Derechos Civiles, Buenos Aires. Enero de 2015.  
 
 OCDE, «Recommendation on Public Procurement». Directorate for Public Governance and Territorial Development. OCDE. 2015.  
+
+## Sitios web, blogs, foros 
+
+S. Linares; J. L. Martí, *Aborto: la propuesta de un referéndum*, <span style="font-variant: small-caps;">Clarín</span>, 11/08/2018, disponible en https://www.clarin.com/opinion/aborto-propuesta-referendum_0_SJ4acDnS7.html Fecha de consulta: 12/08/2018.
+
+R. Álvarez Ugarte, *Pandemia, clases y zoom*, <span style="font-variant: small-caps;">Blog personal</span>, 09/04/2020, disponible en https://ramiroau.github.io/blog/pandemia/ Fecha de consulta: 10/05/2020.
+
+M. Zuckerberg, *Zuckerberg’s remarks on the death of George Floyd*, <span style="font-variant: small-caps;">Facebook</span> (entrada de Facebook), 29/05/2020, disponible en https://www.facebook.com/zuck/posts/10111961824369871 Fecha de consulta: 30/06/2020.
 
 # Contacto
 
