@@ -8,14 +8,6 @@
 
 Aún no hemos corregido algunos errores necesarios para que la GACL este subida al repositorio de estilos CSL (lo que hará que aparezcan en los repositorios de los administradores de bibliografía). En el interín, para instalar el estilo hay que bajar el archivo `guia-argentina-de-citas-legales.csl`, haciendo click derecho y eligiendo guardar el archivo. Si sale bien el archivo bajado tiene una extensión `.csl` y allí se puede instalar en Zotero / Mendeley / etc. haciendo doble click o desde el propio programa (en mi instalación de Zotero, p.ej., es `Zotero` > `Preferences`> `Cite` > `Styles` > `+`).  
 
-## Contenidos 
-
-Este repositorio contiene: 
-
-1. `test`, carpeta con un archivo JSON, un archivo `.md`y un archivo `.pdf`para ver cómo funciona la GACL en la práctica. 
-2. `gacl.pdf`(este README en PDF)
-3. El documento CSL propiamente dicho, para instalar en Zotero et. al.: `guia-argentina-de-citas-legales.csl`. 
-
 ## Especificaciones 
 
 Este es un documento con especificaciones sobre la *Guía Argentina de Citas Legales* desarrollado con base en `spanish-legal.csl` de Rafael Palomino. La GACL funciona como guía de estilo (que autores y editores pueden adoptar / modificar como deseen) pero funciona *especialmente* como un mecanismo automatizado de citas que produce resultados que respetan, en general, la práctica jurídica local. A continuación la lista de materiales que el estilo desea procesar y su estado de implementación actual [^fn2]. 
