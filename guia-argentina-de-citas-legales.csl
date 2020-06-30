@@ -4,6 +4,7 @@
   <info>
     <title>Guía Argentina de Citas Legales (GACL)</title>
     <id>http://www.zotero.org/styles/guia-argentina-de-citas-legales</id>
+    <version>1.1</version>
     <link rel="self" href="http://www.zotero.org/styles/guia-argentina-de-citas-legales"/>
     <author>
       <name>Ramiro Álvarez-Ugarte</name>
@@ -12,7 +13,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>Transformation of Spanish Legal by Rafael Palomino to adapt to a possible Argentinean legal style </summary>
-    <updated>2020-06-28T21:50:39+00:00</updated>
+    <updated>2020-06-30T13:14:59+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -274,7 +275,7 @@
                 </group>
               </group>
             </else-if>
-            <else-if type="article-magazine article-newspaper" match="any">
+            <else-if type="article-magazine article-newspaper article" match="any">
               <group delimiter=", ">
                 <text macro="author"/>
                 <text variable="title" quotes="true"/>
@@ -316,6 +317,29 @@
                     <date-part name="year"/>
                   </date>
                 </group>
+              </group>
+            </else-if>
+            <else-if type="post" match="any">
+              <group delimiter=", ">
+                <text macro="author"/>
+                <text variable="title" font-style="italic"/>
+                <group>
+                  <text variable="container-title" font-variant="small-caps"/>
+                  <text variable="genre" prefix=" (" suffix=")"/>
+                </group>
+                <date form="numeric" variable="issued">
+                  <date-part name="year"/>
+                </date>
+                <group delimiter=" ">
+                  <text term="available at" text-case="lowercase" prefix=" "/>
+                  <text variable="URL"/>
+                </group>
+              </group>
+              <group delimiter=" ">
+                <text term="accessed" text-case="capitalize-first" prefix=" " suffix=":"/>
+                <date form="numeric" variable="accessed">
+                  <date-part name="year"/>
+                </date>
               </group>
             </else-if>
             <else-if type="manuscript" match="any">
