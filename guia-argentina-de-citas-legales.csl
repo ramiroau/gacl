@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="note" default-locale="es-ES" version="1.0" demote-non-dropping-particle="sort-only">
-  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/#) -->
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Guía Argentina de Citas Legales (GACL)</title>
     <id>http://www.zotero.org/styles/guia-argentina-de-citas-legales</id>
@@ -12,7 +12,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>Transformation of Spanish Legal by Rafael Palomino to adapt to a possible Argentinean legal style </summary>
-    <updated>2025-03-12T13:10:26+00:00</updated>
+    <updated>2025-08-26T18:15:20+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -206,7 +206,7 @@
                   <text term="volume" form="short" text-case="lowercase" suffix=" "/>
                   <text variable="volume"/>
                 </group>
-                <group suffix=")">
+                <group>
                   <text variable="issue" prefix="No. " suffix=" ("/>
                   <choose>
                     <if match="any" variable="page">

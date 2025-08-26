@@ -259,6 +259,6 @@ Por cualquier sugerencia o comentario, vías de contacto en https://ramiroau.git
 
 [^fn2]: La idea es que se vaya expandiendo, pero estos son los materiales que parecen necesarios luego de una mini encuesta en Twitter. 
 
-[^fn4]: Son decisiones arbitrarias pero que se basan en algunas ausencias de opciones en los campos que muestra Zotero por default. Aparentemente, muchas de estas ausencias se van a resolver en la versión 1.0 de Zotero. 
+[^fn4]: Son decisiones arbitrarias pero que se basan en algunas ausencias de opciones en los campos que muestra Zotero por default. Aparentemente, muchas de estas ausencias se van a resolver en la versión 7.0 de Zotero. 
 
 
