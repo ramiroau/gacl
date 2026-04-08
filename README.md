@@ -1,4 +1,4 @@
-# Guía Argentina de Citas Legales
+# Guía Argentina de Citas Legales + Recursos
 
 ## Actualizaciones
 
@@ -253,6 +253,28 @@ G. Arballo, *Reformas en la Justicia: el Palacio y la Calle*, <span style="font-
 
 M. Zuckerberg, *Zuckerberg’s remarks on the death of George Floyd*, <span style="font-variant: small-caps;">Facebook</span> (entrada de Facebook), 29/05/2020, disponible en https://www.facebook.com/-zuck/posts/10111961824369871 Fecha de consulta: 30/06/2020.
 
+---
+
+# Más recursos
+
+Además de la GACL, hay varias cosas más en este repositorio: 
+
+- `CSJN Argentina.js` — guarda los casos de la CSJN en esta página (sjconsulta.csjn.gov.ar). 
+- `InfoLEG Statute.js` — guarda los datos de las leyes y resoluciones o decretos en servicios.infoleg.gob.ar. 
+
+Los archivos .`js` deben ir en 
+
+- `macOS: ~/Zotero/translators/`
+- `Windows: C:\Users\<username>\Zotero\translators\`
+- `Linux: ~/Zotero/translators/   `
+
+Por otro lado, al enviar artículos he creado algunos archivos CSL especialmente direccionador a revistas argentinas, en la era pre-AI. Ahora supongo sería más fácil, y deben ser fáciles de corregir. Están en el repositorio. 
+
+- `pautas_naranjas.csl` para Lecciones y Ensayos.
+- `laley` para Revista Jurídica Argentina La Ley.
+- `cidh` para escritos en el Sistema Interamericano.
+
+
 # Contacto
 
 Por cualquier sugerencia o comentario, vías de contacto en https://ramiroau.github.io/
@@ -260,5 +282,4 @@ Por cualquier sugerencia o comentario, vías de contacto en https://ramiroau.git
 [^fn2]: La idea es que se vaya expandiendo, pero estos son los materiales que parecen necesarios luego de una mini encuesta en Twitter. 
 
 [^fn4]: Son decisiones arbitrarias pero que se basan en algunas ausencias de opciones en los campos que muestra Zotero por default. Aparentemente, muchas de estas ausencias se van a resolver en la versión 7.0 de Zotero. 
-
 

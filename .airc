@@ -1,0 +1,6 @@
+# AI_RA Project Marker
+# This file marks this folder as an AI_RA research project.
+# It is auto-created by agent_init.sh
+
+ai_ra_root="/Users/ramiroalvarezugarte/Documents/AI_ra"
+project_root="$(dirname "$(readlink -f "$0")")"

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" locale="es-ES">
+  <info>
+    <title>Pautas Naranjas</title>
+    <id>https://example.com/styles/custom-footnotes-bibliography</id>
+    <link href="https://example.com/styles/custom-footnotes-bibliography" rel="self"/>
+    <author>
+      <name>Ramiro Álvarez-Ugarte</name>
+      <email>ramiroau@gmail.com</email>
+    </author>
+    <category citation-format="note"/>
+    <category field="law"/>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="short" font-variant="small-caps" suffix=", "/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <choose>
+      <if type="book">
+        <text variable="title" font-style="italic" prefix=", "/>
+      </if>
+      <else>
+        <text variable="title" quotes="true" prefix=", "/>
+      </else>
+    </choose>
+  </macro>
+<macro name="locator">
+  <choose>
+    <if test="locator contains '-' or locator contains ','"> <!-- Checks for range indicators like hyphen or comma -->
+      <text prefix=", pp. " variable="locator"/>
+    </if>
+    <else>
+      <text prefix=", p. " variable="locator"/>
+    </else>
+  </choose>
+</macro>
+
+
+
+  <macro name="case">
+    <group delimiter=", ">
+      <text variable="container-title"/>
+      <text variable="title" quotes="true"/>
+    </group>
+  </macro>
+
+  <macro name="url-access">
+    <choose>
+      <if variable="URL">
+        <group prefix=", URL " delimiter=", ">
+          <text variable="URL"/>
+          <choose>
+            <if variable="accessed">
+              <group prefix=" (consultado el ">
+                <date variable="accessed" suffix=")">
+                  <date-part name="day" suffix="/"/>
+                  <date-part name="month" form="numeric" suffix="/"/>
+                  <date-part name="year"/>
+                </date>
+              </group>
+            </if>
+          </choose>
+        </group>
+      </if>
+    </choose>
+  </macro>
+
+
+  <citation>
+    <layout prefix="" suffix="." delimiter="; ">
+      <text macro="author"/>
+      <text macro="title"/>
+      <text macro="locator"/>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <sort>
+      <key variable="author"/>
+      <key variable="title"/>
+    </sort>
+    <layout suffix="." delimiter=", ">
+	<names variable="author">
+  		<name>
+    		<name-part name="family" font-variant="small-caps"/>
+    		<text>, </text>
+    		<name-part name="given"/>
+  		</name>
+	</names>
+      <choose>
+        <if type="book">
+          <group delimiter=", ">
+            <text variable="title" font-style="italic" prefix=", "/>
+			<group delimiter=" ">
+  				<text variable="edition" suffix= " ed."/>
+				</group>
+			<text variable="publisher"/>
+			<date variable="issued" prefix=", ">
+      			<date-part name="year"/>
+    		</date>		              
+    		<text variable="publisher-place"/>
+          </group>
+        </if>
+        <else-if type="chapter">
+          <group delimiter=", ">
+            <text variable="title" quotes="true" prefix=", "/>
+            <text term="en" prefix=" "/>
+            <names variable="editor">
+              <name form="long" font-variant="small-caps" suffix=", "/>
+              <name form="long"/>
+            </names>
+            <text variable="container-title" font-style="italic"/>
+			<group delimiter=" ">
+  				<text variable="edition" suffix= " ed."/>
+			</group>            
+			<text variable="publisher"/>
+			<date variable="issued" prefix=", ">
+      			<date-part name="year"/>
+    		</date>		               
+    		<text variable="publisher-place"/>
+            <text variable="page" />
+          </group>
+        </else-if>
+		<else-if type="article-journal">
+		    <text variable="title" quotes="true" prefix=", "/>
+		    <group delimiter=", ">
+		    <text variable="container-title" font-style="italic" prefix = ", en "/>
+		    <text variable="volume" prefix=" " />
+		    <text variable="issue" prefix="(" suffix=")" />
+			<date variable="issued" prefix=", ">
+      			<date-part name="year"/>
+      			<date-part name="month" prefix="-"/>
+      			<date-part name="day" prefix="-"/>
+    		</date>		   
+    		<text variable="page" />
+		  </group>
+		</else-if>
+        <else-if type="article-newspaper">
+        <text variable="title" quotes="true" prefix=", "/>
+        <group delimiter=", ">
+        <text variable="container-title" font-style="italic" prefix = ", en "/>
+        <text variable="volume" prefix=" " />
+        <text variable="issue" prefix="(" suffix=")" />
+      <date variable="issued" prefix=", ">
+            <date-part name="year"/>
+            <date-part name="month" prefix="-"/>
+            <date-part name="day" prefix="-"/>
+        </date>      
+        <text variable="page" />
+      </group>
+    </else-if>
+		<else-if type="document">
+		    <text variable="title" quotes="true" prefix=", "/>
+		    <group delimiter=", ">
+			<date variable="issued" prefix=", ">     			
+       			<date-part name="day"/>
+      			<date-part name="month" form="numeric" prefix="/"/>
+      			<date-part name="year" prefix="/"/>
+    		</date>		   
+		  </group>
+		</else-if>
+		<else-if type="broadcast">
+		    <text variable="title" quotes="true" prefix=", "/>
+		    <group delimiter=", ">
+		    <text variable="number" prefix = ", episodio "/>
+		  </group>
+		</else-if>
+    <else-if type="legislation">
+        <text variable="title" quotes="true" prefix=", "/>
+        <text variable="number" prefix=", "/>
+        <text variable="container-title" prefix=", "/>
+        <text variable="volume" prefix=" No. "/>
+        <date variable="issued" prefix=", ">
+          <date-part name="day" suffix="/"/>
+          <date-part name="month" form="numeric" suffix="/"/>
+          <date-part name="year"/>
+        </date>
+
+    </else-if>
+        <else-if type="legal_case">
+            <text variable="title" quotes="true" prefix=", "/>
+            <group delimiter=", ">
+            <date variable="issued" prefix=", ">
+              <date-part name="day" suffix="/"/>
+              <date-part name="month" form="numeric" suffix="/"/>
+              <date-part name="year"/>
+            </date>
+            <group delimiter="">
+            <text variable="container-title" font-style="italic"/>
+            <text variable="volume" prefix=" " font-style="italic"/>
+            <text variable="page" prefix=":" font-style="italic"/>
+            </group>  
+          </group>
+        </else-if>
+      </choose>
+      <text macro="url-access"/>
+    </layout>
+  </bibliography>
+</style>
